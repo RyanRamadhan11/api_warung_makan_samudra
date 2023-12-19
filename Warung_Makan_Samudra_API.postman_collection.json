@@ -1,0 +1,621 @@
+{
+	"info": {
+		"_postman_id": "c4d6ee04-1564-4c41-a4f7-b8f34cff575f",
+		"name": "Warung_Makan_Samudra_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "20464726",
+		"_collection_link": "https://orange-resonance-238797.postman.co/workspace/89852a2d-c357-47fe-87ad-ba5b763d3d88/collection/20464726-c4d6ee04-1564-4c41-a4f7-b8f34cff575f?action=share&source=collection_link&creator=20464726"
+	},
+	"item": [
+		{
+			"name": "Branch",
+			"item": [
+				{
+					"name": "Get All Branch",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All Branch",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/branch"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"3ca442ef-4dc3-44ad-8f4c-76bb4d82a720\",\n        \"branchCode\": \"B002\",\n        \"branchName\": \"Bandung Branch\",\n        \"address\": \"Bandung\",\n        \"phoneNumber\": \"08569123002\"\n    },\n    {\n        \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n        \"branchCode\": \"B001\",\n        \"branchName\": \"Jakarta Branch\",\n        \"address\": \"Jakarta\",\n        \"phoneNumber\": \"08569123001\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Create Branch",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"branchCode\" : \"B001\",\n    \"branchName\" : \"Jakarta Branch\",\n    \"address\" : \"Pasar Minggu\",\n    \"phoneNumber\" : \"08569123001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/branch"
+					},
+					"response": [
+						{
+							"name": "Create Branch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"branchCode\" : \"B001\",\n    \"branchName\" : \"Jakarta Branch\",\n    \"address\" : \"Pasar Minggu\",\n    \"phoneNumber\" : \"08569123001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/branch"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Update Branch",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"5965c2c9-bd8c-4196-8a3a-50be754960e6\",\n    \"branchCode\" : \"B001\",\n    \"branchName\" : \"Jakarta Branch\",\n    \"address\" : \"Pasar Minggu Baru\",\n    \"phoneNumber\" : \"08569123001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/branch"
+					},
+					"response": [
+						{
+							"name": "Update Branch",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\": \"5965c2c9-bd8c-4196-8a3a-50be754960e6\",\n    \"branchCode\" : \"B001\",\n    \"branchName\" : \"Jakarta Branch\",\n    \"address\" : \"Pasar Minggu Baru\",\n    \"phoneNumber\" : \"08569123001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/branch"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully update new branch\",\n    \"data\": {\n        \"id\": \"ef67e59b-b048-4011-bc56-31d7613a746e\",\n        \"branchCode\": \"B003\",\n        \"branchName\": \"Medan Branch\",\n        \"address\": \"Medan Baru\",\n        \"phoneNumber\": \"08569123003\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Branch By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/branch/5965c2c9-bd8c-4196-8a3a-50be754960e6"
+					},
+					"response": [
+						{
+							"name": "Get Branch By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/branch/5965c2c9-bd8c-4196-8a3a-50be754960e6"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get branch by id\",\n    \"data\": {\n        \"id\": \"ef67e59b-b048-4011-bc56-31d7613a746e\",\n        \"branchCode\": \"B003\",\n        \"branchName\": \"Medan Branch\",\n        \"address\": \"Medan Baru\",\n        \"phoneNumber\": \"08569123003\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Branch",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXYXJ1bmcgTWFrYW4gU2FtdWRyYSIsInN1YiI6IjIwNDg1ZTg1LTkzMjAtNGJhMy1iNWVkLWMxOWJmZjk4ZjZiMCIsImV4cCI6MTcwMjY0OTcxMiwiaWF0IjoxNzAyNjQ2MTEyLCJyb2xlIjoiUk9MRV9BRE1JTiJ9.TtDuAPQfqzUB5lnYy2vxMRb8g2ZkxBfwSWCFPio4z6g"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/branch/5965c2c9-bd8c-4196-8a3a-50be754960e6"
+					},
+					"response": [
+						{
+							"name": "Delete Branch",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/branch/5965c2c9-bd8c-4196-8a3a-50be754960e6"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully Delete Branch\",\n    \"data\": \"OK\",\n    \"paging\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product and Price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXYXJ1bmcgTWFrYW4gU2FtdWRyYSIsInN1YiI6IjIwNDg1ZTg1LTkzMjAtNGJhMy1iNWVkLWMxOWJmZjk4ZjZiMCIsImV4cCI6MTcwMjY0OTcxMiwiaWF0IjoxNzAyNjQ2MTEyLCJyb2xlIjoiUk9MRV9BRE1JTiJ9.TtDuAPQfqzUB5lnYy2vxMRb8g2ZkxBfwSWCFPio4z6g"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productCode\" : \"P005\",\n    \"productName\" : \"Manis Gula\",\n    \"price\" : 4000,\n    \"branchId\" : {\n        \"id\" : \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\"\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/products"
+					},
+					"response": [
+						{
+							"name": "Create Product and Price",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"productCode\" : \"P001\",\n    \"productName\" : \"Oleo\",\n    \"price\" : 12000,\n    \"branchId\" : {\n        \"id\" : \"5965c2c9-bd8c-4196-8a3a-50be754960e6\"\n    }\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/products"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully created new product\",\n    \"data\": {\n        \"productId\": \"be1a5bcb-300a-4a12-8e51-e5349dab2cfb\",\n        \"productPriceId\": \"f83c4cbf-2093-4cbb-a5eb-d2af04b3f352\",\n        \"productCode\": \"P005\",\n        \"productName\": \"Manis Gula\",\n        \"price\": 4000,\n        \"branch\": {\n            \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n            \"branchCode\": \"B001\",\n            \"branchName\": \"Jakarta Branch\",\n            \"address\": \"Jakarta\",\n            \"phoneNumber\": \"08569123001\"\n        }\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Products",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/products"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully get all product\",\n    \"data\": [\n        {\n            \"productId\": \"8f47edb5-fc2b-4784-a368-4af577210852\",\n            \"productPriceId\": \"5808b9d9-cf71-4b5c-8513-c87f2c911229\",\n            \"productCode\": \"P002\",\n            \"productName\": \"Beng\",\n            \"price\": 9000,\n            \"branch\": {\n                \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n                \"branchCode\": \"B001\",\n                \"branchName\": \"Jakarta Branch\",\n                \"address\": \"Jakarta\",\n                \"phoneNumber\": \"08569123001\"\n            }\n        },\n        {\n            \"productId\": \"dd957821-85d4-4235-b5a2-4f205464c442\",\n            \"productPriceId\": \"d4640d92-ff5c-4f73-b4e3-590935f703f8\",\n            \"productCode\": \"P004\",\n            \"productName\": \"Beng2\",\n            \"price\": 2000,\n            \"branch\": {\n                \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n                \"branchCode\": \"B001\",\n                \"branchName\": \"Jakarta Branch\",\n                \"address\": \"Jakarta\",\n                \"phoneNumber\": \"08569123001\"\n            }\n        }\n    ],\n    \"paging\": {\n        \"currentPage\": 0,\n        \"totalPage\": 1,\n        \"size\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product and Price",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXYXJ1bmcgTWFrYW4gU2FtdWRyYSIsInN1YiI6IjIwNDg1ZTg1LTkzMjAtNGJhMy1iNWVkLWMxOWJmZjk4ZjZiMCIsImV4cCI6MTcwMjY0ODg0OSwiaWF0IjoxNzAyNjQ1MjQ5LCJyb2xlIjoiUk9MRV9BRE1JTiJ9.srLvYFxXy9GcYpFiz6kyHzS8Rvx0LzlQ_w8Jxsv9-qc"
+							}
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\" : \"be1a5bcb-300a-4a12-8e51-e5349dab2cfb\",\n    \"productCode\" : \"P005\",\n    \"productName\" : \"Manis Gula Li\",\n    \"price\" : 4000,\n    \"branchId\" : {\n        \"id\" : \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\"\n    }\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/products"
+					},
+					"response": [
+						{
+							"name": "Update Product and Price",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"id\" : \"be1a5bcb-300a-4a12-8e51-e5349dab2cfb\",\n    \"productCode\" : \"P005\",\n    \"productName\" : \"Manis Gula Li\",\n    \"price\" : 4000,\n    \"branchId\" : {\n        \"id\" : \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\"\n    }\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/products"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully update product\",\n    \"data\": {\n        \"productId\": \"be1a5bcb-300a-4a12-8e51-e5349dab2cfb\",\n        \"productPriceId\": \"f83c4cbf-2093-4cbb-a5eb-d2af04b3f352\",\n        \"productCode\": \"P005\",\n        \"productName\": \"Manis Gula Li\",\n        \"price\": 4000,\n        \"branch\": {\n            \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n            \"branchCode\": \"B001\",\n            \"branchName\": \"Jakarta Branch\",\n            \"address\": \"Jakarta\",\n            \"phoneNumber\": \"08569123001\"\n        }\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product and Price By Branch Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/api/products/f4b8dbfa-261d-4e23-b119-ca9d68e57e84"
+					},
+					"response": [
+						{
+							"name": "Get Product and Price By Branch Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/products/f4b8dbfa-261d-4e23-b119-ca9d68e57e84"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get Product by branch id\",\n    \"data\": {\n        \"productId\": \"8f47edb5-fc2b-4784-a368-4af577210852\",\n        \"productPriceId\": \"5808b9d9-cf71-4b5c-8513-c87f2c911229\",\n        \"productCode\": \"P002\",\n        \"productName\": \"Beng\",\n        \"price\": 9000,\n        \"branch\": {\n            \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n            \"branchCode\": \"B001\",\n            \"branchName\": \"Jakarta Branch\",\n            \"address\": \"Jakarta\",\n            \"phoneNumber\": \"08569123001\"\n        }\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product and Price",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/api/products"
+					},
+					"response": [
+						{
+							"name": "Delete Product and Price",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8080/api/products/fbfe2999-00fd-4bfd-91dd-64e83fadacd6"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully Delete Product and Price\",\n    \"data\": \"OK\",\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Product With Param",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get Product With Param",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/products?minPrice=5000&maxPrice=12000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "minPrice",
+											"value": "5000"
+										},
+										{
+											"key": "maxPrice",
+											"value": "12000"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully get all product\",\n    \"data\": [\n        {\n            \"productId\": \"8f47edb5-fc2b-4784-a368-4af577210852\",\n            \"productPriceId\": \"5808b9d9-cf71-4b5c-8513-c87f2c911229\",\n            \"productCode\": \"P002\",\n            \"productName\": \"Beng\",\n            \"price\": 9000,\n            \"branch\": {\n                \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n                \"branchCode\": \"B001\",\n                \"branchName\": \"Jakarta Branch\",\n                \"address\": \"Jakarta\",\n                \"phoneNumber\": \"08569123001\"\n            }\n        }\n    ],\n    \"paging\": {\n        \"currentPage\": 0,\n        \"totalPage\": 1,\n        \"size\": 5\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"transactionType\": \"EAT_IN\",\n  \"billDetails\": [\n    {\n      \"productPriceId\": \"5808b9d9-cf71-4b5c-8513-c87f2c911229\",\n      \"quantity\": 4\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/transactions"
+					},
+					"response": [
+						{
+							"name": "Create Transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"transactionType\": \"1\",\n  \"billDetails\": [\n    {\n      \"productPriceId\": \"5808b9d9-cf71-4b5c-8513-c87f2c911229\",\n      \"quantity\": 4\n    }\n  ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/transactions"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully created new Transaction\",\n    \"data\": {\n        \"billId\": \"e0d93ee3-bc84-4a40-b504-961d10067f22\",\n        \"receiptNumber\": \"BC-2023-1\",\n        \"transDate\": \"2023-12-15T20:27:00.870210413\",\n        \"transactionType\": \"ONLINE\",\n        \"transactionDetails\": [\n            {\n                \"orderDetailId\": \"990a5ab1-10f8-4ee1-9ba7-a20c5045afb9\",\n                \"productResponse\": {\n                    \"productId\": \"8f47edb5-fc2b-4784-a368-4af577210852\",\n                    \"productPriceId\": \"5808b9d9-cf71-4b5c-8513-c87f2c911229\",\n                    \"productCode\": \"P002\",\n                    \"productName\": \"Beng\",\n                    \"price\": 9000,\n                    \"branch\": {\n                        \"id\": \"f4b8dbfa-261d-4e23-b119-ca9d68e57e84\",\n                        \"branchCode\": \"B001\",\n                        \"branchName\": \"Jakarta Branch\",\n                        \"address\": \"Jakarta\",\n                        \"phoneNumber\": \"08569123001\"\n                    }\n                },\n                \"quantity\": 4,\n                \"totalSales\": null\n            }\n        ]\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Transaction By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Transaction By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/transactions/13d0b553-ee51-41c9-8729-26acd08a890e"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully get transaction by id\",\n    \"data\": {\n        \"billId\": \"13d0b553-ee51-41c9-8729-26acd08a890e\",\n        \"receiptNumber\": \"ABC-2023-1\",\n        \"transDate\": \"2023-12-15T16:17:27.156114\",\n        \"transactionType\": \"EAT_IN\",\n        \"transactionDetails\": null\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Transaction",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get All Transaction",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8080/api/transactions"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "[\n    {\n        \"billId\": \"13d0b553-ee51-41c9-8729-26acd08a890e\",\n        \"receiptNumber\": \"ABC-2023-1\",\n        \"transDate\": \"2023-12-15T16:17:27.156114\",\n        \"transactionType\": \"EAT_IN\",\n        \"transactionDetails\": null\n    },\n    {\n        \"billId\": \"20b6f13a-29fd-4f25-8f26-85d638035ba7\",\n        \"receiptNumber\": \"BC-2023-1\",\n        \"transDate\": \"2023-12-15T19:00:13.517312\",\n        \"transactionType\": \"ONLINE\",\n        \"transactionDetails\": null\n    },\n    {\n        \"billId\": \"21915274-e4de-4424-a1ed-1853fe5afd7a\",\n        \"receiptNumber\": \"BC-2023-1\",\n        \"transDate\": \"2023-12-15T19:00:35.391808\",\n        \"transactionType\": \"EAT_IN\",\n        \"transactionDetails\": null\n    },\n    {\n        \"billId\": \"e0d93ee3-bc84-4a40-b504-961d10067f22\",\n        \"receiptNumber\": \"BC-2023-1\",\n        \"transDate\": \"2023-12-15T20:27:00.87021\",\n        \"transactionType\": \"ONLINE\",\n        \"transactionDetails\": null\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register Customer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"tes1\",\n    \"password\": \"tes1\",\n    \"customerName\" : \"tes\",\n    \"address\": \"jalan ragunan\",\n    \"mobilePhone\": \"085123050101\",\n    \"email\": \"tes1@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/register"
+					},
+					"response": [
+						{
+							"name": "Register Customer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"tes1\",\n    \"password\": \"tes1\",\n    \"customerName\" : \"tes\",\n    \"address\": \"jalan ragunan\",\n    \"mobilePhone\": \"085123050101\",\n    \"email\": \"tes1@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/auth/register"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully created register new customer\",\n    \"data\": {\n        \"username\": \"tes1\",\n        \"role\": \"ROLE_CUSTOMER\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Register Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8080/api/auth/register/admin"
+					},
+					"response": [
+						{
+							"name": "Register Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"admin1\",\n    \"customerName\" : \"admin1\",\n    \"address\": \"jalan ragunan\",\n    \"mobilePhone\": \"085123050201\",\n    \"email\": \"admin@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/auth/register/admin"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully created register new Admin\",\n    \"data\": {\n        \"username\": \"admin1\",\n        \"role\": \"ROLE_ADMIN\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Login Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"admin1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin1\",\n    \"password\": \"admin1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/auth/login"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 200,\n    \"message\": \"Successfully Login\",\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXYXJ1bmcgTWFrYW4gU2FtdWRyYSIsInN1YiI6IjIwNDg1ZTg1LTkzMjAtNGJhMy1iNWVkLWMxOWJmZjk4ZjZiMCIsImV4cCI6MTcwMjY0OTcxMiwiaWF0IjoxNzAyNjQ2MTEyLCJyb2xlIjoiUk9MRV9BRE1JTiJ9.TtDuAPQfqzUB5lnYy2vxMRb8g2ZkxBfwSWCFPio4z6g\",\n        \"role\": \"ROLE_ADMIN\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Register Seller",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"seller1\",\n    \"password\": \"seller1\",\n    \"customerName\" : \"seller1\",\n    \"address\": \"jalan ragunan\",\n    \"mobilePhone\": \"085123050301\",\n    \"email\": \"seller1@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/api/auth/register/seller"
+					},
+					"response": [
+						{
+							"name": "Register Seller",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"seller1\",\n    \"password\": \"seller1\",\n    \"customerName\" : \"seller1\",\n    \"address\": \"jalan ragunan\",\n    \"mobilePhone\": \"085123050301\",\n    \"email\": \"seller1@gmail.com\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8080/api/auth/register/seller"
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 201,\n    \"message\": \"Successfully created register new seller\",\n    \"data\": {\n        \"username\": \"seller1\",\n        \"role\": \"ROLE_SELLER\"\n    },\n    \"paging\": null\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
